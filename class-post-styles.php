@@ -14,6 +14,7 @@ class McNinja_Post_Styles {
 	public function __construct() {
 		add_post_type_support( 'post', 'post-styles' );
 		add_action( 'init', array( $this, 'create_style_taxonomies' ), 0 );
+		add_action('after_setup_theme', array( $this, 'load_plugin_textdomain' ) );
 		add_filter( 'post_class', array( $this, 'my_class_names' ) );
 		add_action( 'add_meta_boxes', array( $this, 'stylesbox' ) );
 		add_action( 'save_post', array( $this, 'post_style_meta_box_save_postdata' ) );
@@ -43,10 +44,12 @@ class McNinja_Post_Styles {
 		if ( post_type_supports( $post->post_type, 'post-styles' ) ) {
 			$post_style = $this->get_post_style( $post );
 			if( !is_single() ) {
-				if ( $post_style && ! is_wp_error( $post_style )  )
+				if ( $post_style && ! is_wp_error( $post_style )  ) {
 					$classes[] = 'post-style-' . sanitize_html_class( $post_style );
-				else
-					$classes[] = 'post-style-standard';
+					$classes[] = 'post-format-' . sanitize_html_class( $post_style );
+				} else {
+					$classes[] = 'post-style-standard post-format-standard';
+				}
 			}
 		}
 		
@@ -54,13 +57,23 @@ class McNinja_Post_Styles {
 		return $classes;
 	}
 
+	public function load_plugin_textdomain() {
+
+		load_plugin_textdomain(
+			'Post style',
+			FALSE,
+			dirname( plugin_basename( __FILE__ ) ) . '/languages/'
+		);
+
+	}
+
 	public function create_style_taxonomies () {
 		register_taxonomy( 'post_style', 'post', array(
 			'public' => true,
 			'hierarchical' => false,
 			'labels' => array(
-				'name' => _x( 'Post Style', 'post style' ),
-				'singular_name' => _x( 'Post Style', 'post style' ),
+				'name' => _x( 'Post Style', 'Post style' ),
+				'singular_name' => _x( 'Post Style', 'Post style' ),
 			),
 			'query_var' => true,
 			'rewrite' => 'type',
@@ -72,7 +85,7 @@ class McNinja_Post_Styles {
 
 	public function stylesbox ( $post_type ) {
 		if( $post_type == 'post' ) {
-			add_meta_box( 'stylediv', _x( 'Post Style', 'post style' ), array( $this, 'post_style_meta_box' ), null, 'side', 'default', 0 );
+			add_meta_box( 'stylediv', _x( 'Post Style', 'Post style' ), array( $this, 'post_style_meta_box' ), null, 'side', 'default', 0 );
 		}
 	}
 
