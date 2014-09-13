@@ -9,14 +9,15 @@
  *
  * @wordpress-plugin
  * Plugin Name: McNinja Post Styles
- * Description: Load Post Styles
- * Version: 1.0
+ * Version: 1.1
  * Author: Tom Harrigan
  * Plugin URI:  http://thomasharrigan.com/mcninja-post-styles
- * Description: Allow your readers easily to attach an image to their comments on posts and pages.
+ * Description: Unleash the creativity of your content with custom post formats.
  * Author URI:  http://thomasharrigan.com
  * License:     GPL-2.0+
  * License URI: http://www.gnu.org/licenses/gpl-2.0.txt
+ * Text Domain: Post style
+ * Domain Path: /languages
  */
 
 // If this file is called directly, abort.
@@ -38,4 +39,12 @@ function has_post_style() {
 
 function set_post_style() {
 	return McNinja_Post_Styles::get_instance()->set_post_style();
+}
+
+function get_post_style_link( $link ) {
+	return McNinja_Post_Styles::get_instance()->get_post_style_link( $link );
+}
+
+function get_post_style_string( $slug ) {
+	return McNinja_Post_Styles::get_instance()->get_post_style_string( $slug );
 }

@@ -2,8 +2,8 @@
 Contributors: TomHarrigan
 Tags: formatting, taxonomy, style
 Requires at least: 3.1
-Tested up to: 3.9.1
-Stable tag: 1.0.0
+Tested up to: 4.0.0
+Stable tag: 1.1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -41,7 +41,7 @@ For more information or to follow the project, check out the [project page](http
 
 == Frequently Asked Questions ==
 
-= How do I make use of Post Styles =
+= How do I make use of Post Styles? =
 
 In your loop or other area in which displaying a content template, change your get_template_part call to the following:
 
@@ -49,15 +49,15 @@ get_template_part( 'content', get_post_style() );
 
 get_post_style() will return the slug of the selected post style, for example, if a post is using the 'image' Post Style, then get_template_part will be looking to use content-image.php to display the post.
 
-= What template will be used if the 'Standard' post style (default) is selected =
+= What template will be used if the 'Standard' post style (default) is selected? =
 
 By default, it will look for content-post.php, if there is no content-post.php, it will use content.php
 
-= How do I add CSS to a specific Post Style =
+= How do I add CSS to a specific Post Style? =
 
 Posts will have a class associated with their style. The class name is in the form of 'post-style-(slug-name)', so a post using 'image' can be targeted with the '.post-style-image' class.
 
-= How do I add a new Post Style =
+= How do I add a new Post Style? =
 
 The 'post_style_strings' filter allows you to add new styles. It provides an array of Post Styles and you can add your new post style. The example below adds a new post style named 'Golden Unicorn', with a slug 'golden-unicorn'.
 
@@ -67,7 +67,7 @@ function my_new_custom_post_style( $strings ) {
 }
 add_filter( 'post_style_strings', 'my_new_custom_post_style');
 
-= Why aren't there template files =
+= Why aren't there template files? =
 
 This plugin provides the mechanism for allowing custom post formats. It is basically a glorified taxonomy. It is up to themes and developers to utlize this. I'll be writing some tutorials and examples on my blog shortly though. Feel free to shoot me an email or contact me in the meantime. 
 
@@ -77,6 +77,12 @@ This plugin provides the mechanism for allowing custom post formats. It is basic
 2. Example of a post stream utlizing McNinja Post Styles with 'video', 'image', and 'standard' post styles.
 
 == Changelog ==
+
+= 1.1 =
+* Expose get_post_style_link() function
+* Expose get_post_style_string() function
+* i18n support: add .pot file and make strings translateable
+* Add backwards compatibility with post-format CSS classes for themes already implementing post formats
 
 = 1.0 =
 * Initial release
