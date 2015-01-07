@@ -83,49 +83,49 @@ This plugin provides the mechanism for allowing custom post formats. It is basic
 
 1. Example of posts utlizing Post Styles with 'video', 'image', and 'standard' post styles.
 
-2. A post with the Gallery post style
-
-3. Same post without Post Styles plugin enabled
-
-4. A post with the Playlist post style
-
-5. Same post without Post Styles plugin enabled
-
-6. A post with the List post style
-
-7. Same post without Post Styles plugin enabled
-
-8. A post with the Video post style
-
-9. Same post without Post Styles plugin enabled
-
-10. A post with the Audio post style
+10. A post with the Gallery post style
 
 11. Same post without Post Styles plugin enabled
 
-12. A post with the Embed post style
+12. A post with the Playlist post style
 
 13. Same post without Post Styles plugin enabled
 
-14. A post with the Image post style
+14. A post with the List post style
 
 15. Same post without Post Styles plugin enabled
 
-16. A post with the Quote post style
+16. A post with the Video post style
 
 17. Same post without Post Styles plugin enabled
 
-18. A post with the Chat post style
+2. A post with the Audio post style
 
-19. Same post without Post Styles plugin enabled
+20. Same post without Post Styles plugin enabled
 
-20. A post with the Link post style
+21. A post with the Embed post style
 
-21. Same post without Post Styles plugin enabled
+22. Same post without Post Styles plugin enabled
 
-22. The metabox added to the Post Edit screen
+23. A post with the Image post style
 
-23. Option on Settings -> Reading screen to enable Post Style formatting
+24. Same post without Post Styles plugin enabled
+
+25. A post with the Quote post style
+
+26. Same post without Post Styles plugin enabled
+
+27. A post with the Chat post style
+
+28. Same post without Post Styles plugin enabled
+
+29. A post with the Link post style
+
+3. Same post without Post Styles plugin enabled
+
+30. The metabox added to the Post Edit screen
+
+31. Option on Settings -> Reading screen to enable Post Style formatting
 
 == Changelog ==
 
