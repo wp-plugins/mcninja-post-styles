@@ -9,7 +9,7 @@
  *
  * @wordpress-plugin
  * Plugin Name: McNinja Post Styles
- * Version: 2.0
+ * Version: 2.0.1
  * Author: TomHarrigan
  * Plugin URI:  http://thomasharrigan.com/mcninja-post-styles
  * Description: Unleash the creativity of your content with custom post formats.
