@@ -1,23 +1,23 @@
 === McNinja Post Styles ===
 Contributors: TomHarrigan
-Tags: formatting, taxonomy, style, post formats, 
+Tags: formatting, taxonomy, style, post formats, excerpt
 Requires at least: 3.1
 Tested up to: 4.1
-Stable tag: 2.0
+Stable tag: 2.0.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Every post is unique, start treating them that way.
+It's like Post Formats, but actually useful. Every post is unique, start treating them that way.
 
 == Description ==
 
-Every post is unique, but on almost every site, they all look the same at first: A title, an excerpt and a featured image. Why not display the most important part of your posts to readers and actually give them a reason to click on your post a read it? That's what this plugin does.
+Go to the homepage or blog page of a site, chances are, all of the posts look similar: A title, an excerpt and a featured image. Why not display the most important part of your posts to readers and actually give them a reason to click on your post a read it? That's what this plugin does.
+
+To enable Post Style formatting functionality, go to Settings->Reading and select "Enable Post Style formatting."
 
 McNinja Post Styles is what we always wanted Post Formats to be: powerful, flexible and extendable. Unleash the creativity of your content.
 
 McNinja Post Styles can display content based on the Post Style of a post. For example, if your post has a video in it and you've selected the 'Video' style, your blog page, category pages, etc. will display that video rather than an excerpt.
-
-To enable this functionality, go to Settings->Reading and select "Enable Post Style formatting."
 
 Post Styles can be selected for a Post from the 'Edit Post' screen.
 
@@ -81,10 +81,57 @@ This plugin provides the mechanism for allowing custom post formats. It is basic
 
 == Screenshots ==
 
-1. The metabox added to the Post Edit screen
-2. Example of a post stream utlizing McNinja Post Styles with 'video', 'image', and 'standard' post styles.
+1. Example of posts utlizing Post Styles with 'video', 'image', and 'standard' post styles.
+
+2. A post with the Gallery post style
+
+3. Same post without Post Styles plugin enabled
+
+4. A post with the Playlist post style
+
+5. Same post without Post Styles plugin enabled
+
+6. A post with the List post style
+
+7. Same post without Post Styles plugin enabled
+
+8. A post with the Video post style
+
+9. Same post without Post Styles plugin enabled
+
+10. A post with the Audio post style
+
+11. Same post without Post Styles plugin enabled
+
+12. A post with the Embed post style
+
+13. Same post without Post Styles plugin enabled
+
+14. A post with the Image post style
+
+15. Same post without Post Styles plugin enabled
+
+16. A post with the Quote post style
+
+17. Same post without Post Styles plugin enabled
+
+18. A post with the Chat post style
+
+19. Same post without Post Styles plugin enabled
+
+20. A post with the Link post style
+
+21. Same post without Post Styles plugin enabled
+
+22. The metabox added to the Post Edit screen
+
+23. Option on Settings -> Reading screen to enable Post Style formatting
 
 == Changelog ==
+
+= 2.0.1 =
+* Add content formatting for Image post style
+* Documentation update
 
 = 2.0 =
 * Add content formatting based on Post Style

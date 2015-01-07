@@ -413,6 +413,10 @@ class McNinja_Post_Styles {
 			$style = get_post_style();
 
 			switch ( $style ) {
+				case 'image':
+					preg_match_all( '/(<img[^>]+\>)/is', get_the_content(), $matches );
+					$content = $matches[1][0];
+					break;
 				case 'chat':
 					$content = $this->get_the_post_style_chat( $content );
 					break;
